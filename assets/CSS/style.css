@@ -185,11 +185,16 @@ body {
 
 @media screen and (max-width: 1440px) {
   .input-group {
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .gender-group {
     justify-content: space-around;
+  }
+
+  .input-box-cadastro {
+    max-width: 14em;
   }
 }
 
@@ -213,17 +218,23 @@ body {
     height: fit-content;
   }
 
+  .form form {
+    width: 50%;
+  }
+
   .input-group {
     display: block;
     flex-direction: column;
     overflow-y: scroll;
     flex-wrap: nowrap;
-    max-height: 15rem;
-    padding-right: 5rem;
+    max-height: 18rem;
+    padding-right: 0rem;
   }
 
-  .input-box {
-    margin-left: 1rem;
+  .input-box,
+  .input-box-cadastro {
+    padding-left: 1em;
+    min-width: 24em;
   }
 
   .gender-inputs {
@@ -236,5 +247,40 @@ body {
 
   .gender-input {
     margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-box,
+  .input-box-cadastro {
+    padding-left: 1em;
+    padding-right: 2em;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form form {
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .input-group {
+    padding-right: 0;
+  }
+
+  .input-box-login {
+    margin-left: 0;
+    padding: 0 0.5em;
+  }
+
+  .input-box,
+  .input-box-cadastro {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1em 0 0.5em;
   }
 }
